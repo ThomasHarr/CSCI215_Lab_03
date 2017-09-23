@@ -20,11 +20,17 @@ function calculate() {
     // ==========================================
     // Todo: Perform conversion calculations here
 
+    var lbs = getElementById("weight");
+    var inch = getElementById("height");
+    var kg = lbs * .454;
+    var meter = inch * .0254;
+    var cm = inch * 2.54;
+
     // -------------------------------
     // Body Surface Area (BSA)
     // -------------------------------
 
-    var BSA = 0;
+    var BSA = Math.sqrt((cm * kg)/3600);
 
     // ==========================================
     // Todo: Perform BSA calculation here
@@ -39,12 +45,13 @@ function calculate() {
 
         // ==========================================
         // Todo: Perform female IBW calculation here
-
+        var femaleIBW = 45.5 + 2.3 *(height - 60);
 
     } else if ( male ) {
 
         // ==========================================
         // Todo: Perform male IBW calculation here
+        var maleIBW = 50 + 2.3 *(height - 60);
 
     }
 
@@ -52,7 +59,7 @@ function calculate() {
     // Body Mass Index (BMI)
     // -------------------------------
 
-    var BMI = 0;
+    var BMI = kg / Math.pow(meter,2);
 
     // ==========================================
     // Todo: Perform BMI calculation here

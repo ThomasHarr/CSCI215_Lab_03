@@ -20,8 +20,8 @@ function calculate() {
     // ==========================================
     // Todo: Perform conversion calculations here
 
-    var lbs = getElementById("weight");
-    var inch = getElementById("height");
+    var lbs = document.getElementById("weight");
+    var inch = document.getElementById("height");
     var kg = lbs * .454;
     var meter = inch * .0254;
     var cm = inch * 2.54;
